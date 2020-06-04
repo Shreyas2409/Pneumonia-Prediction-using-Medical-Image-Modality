@@ -10,7 +10,7 @@ ONNX_MODEL_PATH = './model/pnuemonia.onnx'
 HD5_MODEL_PATH = './model/pnuemonia.h5'
 
 if not os.path.exists(ONNX_MODEL_PATH):
-    print('ONNX Model not found. Try running convert.py')
+    print('ONNX Model not found.run onnx.py')
 
 runtime_provider_fn = None
 runtime = "onnx"
@@ -49,7 +49,7 @@ def infer():
     image = image.stream.read()
 
     isinfer, result = runtime_provider_fn(image)
-
+       #onnx run time execution
     if isinfer :
         return {
             "success" : True,
@@ -60,6 +60,7 @@ def infer():
         }
     
     else :
+        #keras runtime execution
         return {
             "success" : True,
             "isinfer" : False,
@@ -68,5 +69,5 @@ def infer():
             "runtme" : runtime
         }
 
-
+#standard port number
 app.run('0.0.0.0', port = 5000)
