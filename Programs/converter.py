@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 import os
 
-def convert_to_cnnx(model, parameters, samples = './testcase'):
+def convert_to_onnx(model, parameters, samples = './testcase'):
 
     if not isinstance(model, Model) :
         model = load_model(model)
