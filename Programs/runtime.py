@@ -27,7 +27,7 @@ class Inference :
         #returns the output in a list  format
         if not self.wait : return True, [(self.context.infer(img)[0]).tolist()]
 
-        self.queue.put(image_data)
+        self.queue.put(imag)
         if self.queue.qsize() < self.size :
             return (False, self.batch_size - self.queue.qsize())
         
@@ -35,7 +35,7 @@ class Inference :
         print()
         for i in range(self.batch_size):
             image = self.queue.get()
-            batch.append(image)
+            batch.append(img)
         
         batch = np.array(batch, dtype = 'float32')
         return True,[int(np.argmax(tensor)) for tensor in self.context.infer(batch)]
