@@ -56,12 +56,12 @@ class Context :
         if img.ndim == 3 :
            img = np.expand_dims(img, axis = 0)
         img = [img.astype('float32')]
-        feed = dict([ (input.name, image_data[i]) for i, input in  enumerate(self.session.get_inputs()) ])
+        feed = dict([ (input.name, img[i]) for i, input in  enumerate(self.session.get_inputs()) ])
         outputs = [ output.name for output in self.session.get_outputs() ]
 
         return self.session.run(outputs, given)
 
-def preprocess(image_data):
+def preprocess(img):
     #image_data is  bytes data from an image
     if not type(img) == bytes :
         print('data should be a byte-string')
@@ -70,9 +70,9 @@ def preprocess(image_data):
     img = np.fromstring(img, dtype = 'uint8')
     img_np = cv2.imdecode(img, cv2.IMREAD_COLOR)
 
-    print(image_np.shape)
+    print(img_np.shape)
     
-    if image_np.shape[-1] != 3 :
+    if img_np.shape[-1] != 3 :
         print('Provide an RGB image')
         sys.exit(0)
     
