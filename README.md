@@ -7,7 +7,7 @@ PulmoPredict is a state-of-the-art, computer-aided diagnostic system designed to
 - **Automated Image Processing:**  
   Pre-process chest X-ray images using OpenCV-Python for improved analysis.
 - **Deep Learning Detection:**  
-  Utilize a fine-tuned VGG16 model (built with Keras and TensorFlow2) to detect pneumonia and predict probability values.
+  A fine-tuned VGG16 model (built with Keras and TensorFlow2) was used to detect pneumonia and predict probability values.
 - **Modern User Interface:**  
   A responsive frontend built with React, Material-UI, and Reactstrap for a sleek, user-friendly experience.
 - **Backend Services:**  
@@ -15,7 +15,7 @@ PulmoPredict is a state-of-the-art, computer-aided diagnostic system designed to
 - **Model Optimization:**  
   Optional conversion of models to ONNX format for improved deployment efficiency.
 - **Experimentation & Prototyping:**  
-  Use Colab Notebooks for training, fine-tuning, and testing the model.
+  Used Colab Notebooks for training, fine-tuning, and testing the model.
 
 ## Technologies Used
 - **Frontend:**  
