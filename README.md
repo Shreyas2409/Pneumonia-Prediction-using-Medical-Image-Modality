@@ -1,9 +1,36 @@
-# Pneumonia-Prediction-using-Medical-Image-Modality
+# PulmoPredict: Pneumonia Prediction using Medical Image Modality
 
-Pneumonia is a disease which occurs in the lungs caused by a bacterial infection. Early diagnosis is an important factor
-for the successful treatment process. Generally, the disease can be diagnosed from chest X-ray images by an expert radiologist.
-The diagnoses can be subjective for some reasons such as the appearance of disease which can be unclear in chest X-ray images
-or can be confused with other diseases. It is also much more difficult to make clinical diagnoses with chest X-rays than with other
-imaging modalities. Therefore a computer aided diagnosis systems are needed as tools to assist in the clinical interpretation of
-chest x-rays would therefore fulfill an unmet need.To solve this problem I have developed an application that detects
-Pneumonia and predicts the accurate probability values.
+## Overview
+PulmoPredict is a state-of-the-art, computer-aided diagnostic system designed to detect pneumonia from chest X-ray images. By leveraging advanced deep learning techniques and a modern tech stack, PulmoPredict computes accurate probability values, supporting radiologists in early and precise diagnosis. The project features a robust backend powered by Flask, a dynamic frontend built with React, and a deep learning model based on VGG16 using Keras and TensorFlow2. Optional model optimization with ONNX and prototyping via Colab Notebooks further enhance its capabilities.
+
+## Features
+- **Automated Image Processing:**  
+  Pre-process chest X-ray images using OpenCV-Python for improved analysis.
+- **Deep Learning Detection:**  
+  Utilize a fine-tuned VGG16 model (built with Keras and TensorFlow2) to detect pneumonia and predict probability values.
+- **Modern User Interface:**  
+  A responsive frontend built with React, Material-UI, and Reactstrap for a sleek, user-friendly experience.
+- **Backend Services:**  
+  Flask-based API for handling image uploads, prediction requests, and model serving.
+- **Model Optimization:**  
+  Optional conversion of models to ONNX format for improved deployment efficiency.
+- **Experimentation & Prototyping:**  
+  Use Colab Notebooks for training, fine-tuning, and testing the model.
+
+## Technologies Used
+- **Frontend:**  
+  - React  
+  - Material-UI  
+  - Reactstrap
+- **Backend:**  
+  - Flask
+- **Deep Learning:**  
+  - Keras  
+  - TensorFlow2  
+  - VGG16 (Pre-trained and fine-tuned)
+- **Image Processing:**  
+  - OpenCV-Python
+- **Model Deployment & Optimization:**  
+  - ONNX
+- **Prototyping:**  
+  - Google Colab Notebook
